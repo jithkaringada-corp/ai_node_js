@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const openai = new OpenAI();
-
-export async function POST(req, res) {
+export async function POST(req) {
+    const openai = new OpenAI();
     const { userprompt } = await req.json();
     console.log("User prompt: " + userprompt);
     
